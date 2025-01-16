@@ -1,0 +1,9 @@
+To fix the overflow issue, consider these solutions:
+
+* **Use `box-sizing: border-box;`:** This makes padding and border included in the element's total width, preventing overflow. 
+* **Adjust padding or width calculations:** Recalculate `calc()` to account for padding. For example: `.element { box-sizing: border-box; width: calc(100% - 40px); padding: 10px; }`
+
+To resolve the vertical spacing issue, avoid using percentage `line-height` on elements containing images. Instead, consider using:
+
+* **Fixed `line-height`:** Use a fixed value that works well with your text and image sizes. 
+* **Vertical alignment techniques:** Employ techniques like `vertical-align: middle;` (for inline elements) or Flexbox or Grid for more complex layouts to precisely position images and text.
